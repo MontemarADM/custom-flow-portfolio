@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — Custom Flow</title>
+<meta name="description" content="Política de Privacidad de Custom Flow SpA conforme a la Ley N° 19.628 modificada por la Ley N° 21.719: qué datos tratamos, para qué, por cuánto tiempo y cómo ejercer tus derechos.">
+<link rel="canonical" href="https://www.customflow.cl/privacidad.html">
+<meta name="theme-color" content="#0B0D12">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preload" href="inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;font-display:swap;src:url('space-grotesk.woff2') format('woff2');}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('inter.woff2') format('woff2');}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url('jetbrains-mono.woff2') format('woff2');}
+
+  :root{ --bg:#0B0D12; --bg-alt:#10131B; --surface:#151822; --surface-hi:#1B1F2C; --border:#262B3A;
+    --text:#F5F6FA; --text-dim:#B4B9CB; --text-faint:#7A8099; --violet:#3E8EEF; --cyan:#4FD8C4; --amber:#FA8232; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  a{ color:var(--cyan); text-underline-offset:3px; }
+  a:hover{ color:#fff; }
+  :focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
+  header.top{ border-bottom:1px solid var(--border); background:#0B0D12ee; position:sticky; top:0; backdrop-filter:blur(10px); z-index:10; }
+  .top-in{ max-width:1000px; margin:0 auto; padding:14px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .top-in img{ height:38px; display:block; }
+  .back{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:var(--text); text-decoration:none; border:1px solid var(--border); padding:9px 16px; border-radius:10px; }
+  .back:hover{ border-color:var(--cyan); }
+  .wrap{ max-width:1000px; margin:0 auto; padding:56px 24px 96px; display:grid; gap:48px; grid-template-columns:1fr; }
+  @media(min-width:900px){ .wrap{ grid-template-columns:240px minmax(0,1fr); } }
+  aside nav{ position:sticky; top:96px; font-size:0.85rem; }
+  aside nav b{ font-family:'Space Grotesk',sans-serif; display:block; margin-bottom:10px; color:var(--text); }
+  aside nav a{ display:block; color:var(--text-dim); text-decoration:none; padding:5px 0; border-left:2px solid var(--border); padding-left:12px; }
+  aside nav a:hover{ color:var(--text); border-color:var(--cyan); }
+  @media(max-width:899px){ aside{ display:none; } }
+  main{ max-width:72ch; }
+  h1{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(2rem,5vw,2.9rem); letter-spacing:-0.02em; line-height:1.1; margin-bottom:14px; }
+  .meta{ font-size:0.85rem; color:var(--text-faint); margin-bottom:28px; }
+  .lead{ color:var(--text-dim); font-size:1.05rem; margin-bottom:12px; }
+  .box{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--cyan); border-radius:12px; padding:16px 20px; margin:22px 0; font-size:0.95rem; color:var(--text-dim); }
+  h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.4rem; margin:44px 0 12px; letter-spacing:-0.01em; scroll-margin-top:90px; }
+  h3{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.05rem; margin:22px 0 6px; }
+  p{ margin-bottom:14px; color:var(--text-dim); }
+  ul,ol{ margin:0 0 16px 22px; color:var(--text-dim); }
+  li{ margin-bottom:6px; padding-left:4px; }
+  strong{ color:var(--text); font-weight:600; }
+  table{ width:100%; border-collapse:collapse; margin:14px 0 22px; font-size:0.88rem; }
+  th,td{ text-align:left; vertical-align:top; padding:11px 12px; border-bottom:1px solid var(--border); color:var(--text-dim); }
+  th{ color:var(--text); font-family:'Space Grotesk',sans-serif; font-weight:600; background:var(--surface); }
+  .tbl{ overflow-x:auto; }
+  footer.bot{ border-top:1px solid var(--border); padding:28px 24px; text-align:center; font-size:0.82rem; color:var(--text-faint); }
+  footer.bot a{ color:var(--text-dim); margin:0 10px; }
+  footer.bot button{ background:none; border:0; color:var(--text-dim); font:inherit; cursor:pointer; text-decoration:underline; text-underline-offset:3px; margin:0 10px; }
+
+  /* ---------- consentimiento ---------- */
+  .consent{ max-width:560px; margin:0 auto; text-align:left; }
+  .consent-check{
+    display:flex; gap:14px; align-items:flex-start; cursor:pointer;
+    background:var(--bg-alt); border:1px solid var(--border); border-radius:14px;
+    padding:16px 18px; font-size:0.88rem; line-height:1.55; color:var(--text-dim);
+    transition:border-color .2s;
+  }
+  .consent-check:hover{ border-color:var(--violet); }
+  .consent-check input{
+    appearance:none; -webkit-appearance:none; flex-shrink:0;
+    width:22px; height:22px; margin-top:1px; border-radius:6px;
+    border:2px solid var(--text-faint); background:transparent; cursor:pointer;
+    display:grid; place-items:center; transition:background .15s,border-color .15s;
+  }
+  .consent-check input:checked{ background:var(--cyan); border-color:var(--cyan); }
+  .consent-check input:checked::after{
+    content:''; width:6px; height:11px; border:solid #0B0D12; border-width:0 2.5px 2.5px 0;
+    transform:rotate(45deg) translate(-1px,-1px);
+  }
+  .consent-check input:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
+  .consent-check a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; }
+  .consent-actions{ display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:22px; }
+  .btn-primary.is-disabled{
+    background:var(--surface-hi); color:var(--text-faint); box-shadow:none;
+    cursor:not-allowed; transform:none; border:1px solid var(--border);
+  }
+  .btn-primary.is-disabled:hover{ transform:none; box-shadow:none; }
+  .consent-note{ font-size:0.78rem; color:var(--text-faint); line-height:1.55; text-align:center; max-width:52ch; margin:0 auto; }
+  .consent-note a{ text-decoration:underline; text-underline-offset:3px; }
+  .consent-hint{ font-size:0.82rem; color:var(--amber); min-height:1.2em; text-align:center; }
+
+  /* ---------- banner de cookies ---------- */
+  .ck{
+    position:fixed; z-index:100; left:16px; right:16px; bottom:16px;
+    max-width:520px; background:var(--surface); color:var(--text);
+    border:1px solid var(--border); border-radius:18px; padding:22px;
+    box-shadow:0 24px 60px -12px #000c; font-size:0.88rem; line-height:1.55;
+  }
+  @media(min-width:640px){ .ck{ left:24px; right:auto; bottom:24px; } }
+  .ck[hidden]{ display:none; }
+  .ck h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.05rem; margin-bottom:8px; }
+  .ck p{ color:var(--text-dim); }
+  .ck p a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; }
+  .ck-row{ display:flex; gap:10px; margin-top:16px; }
+  .ck-btn{
+    flex:1; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;
+    padding:12px 14px; border-radius:10px; cursor:pointer;
+    background:var(--surface-hi); color:var(--text); border:1px solid var(--text-faint);
+    transition:border-color .2s, background .2s;
+  }
+  .ck-btn:hover{ border-color:var(--cyan); background:#222838; }
+  .ck-btn:focus-visible, .ck-link:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
+  .ck-link{
+    background:none; border:0; color:var(--text-dim); font:inherit; font-size:0.84rem;
+    text-decoration:underline; text-underline-offset:3px; cursor:pointer; margin-top:12px; padding:4px 0;
+  }
+  .ck-link:hover{ color:var(--text); }
+  .ck-panel{ margin-top:14px; border-top:1px solid var(--border); padding-top:6px; }
+  .ck-opt{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:12px 0; border-bottom:1px solid var(--border); }
+  .ck-opt b{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.92rem; display:block; margin-bottom:2px; }
+  .ck-opt span{ color:var(--text-dim); font-size:0.8rem; }
+  .ck-sw{ position:relative; flex-shrink:0; width:44px; height:26px; }
+  .ck-sw input{ position:absolute; inset:0; opacity:0; width:100%; height:100%; margin:0; cursor:pointer; z-index:2; }
+  .ck-sw i{ position:absolute; inset:0; border-radius:99px; background:var(--surface-hi); border:1px solid var(--text-faint); transition:background .2s; }
+  .ck-sw i::after{ content:''; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:var(--text-dim); transition:transform .2s, background .2s; }
+  .ck-sw input:checked + i{ background:var(--cyan); border-color:var(--cyan); }
+  .ck-sw input:checked + i::after{ transform:translateX(18px); background:#0B0D12; }
+  .ck-sw input:disabled{ cursor:not-allowed; }
+  .ck-sw input:disabled + i{ opacity:.55; }
+  .ck-sw input:focus-visible + i{ outline:2px solid var(--cyan); outline-offset:2px; }
+  .footer-legal{ display:flex; flex-wrap:wrap; gap:6px 22px; font-size:0.82rem; color:var(--text-dim); }
+  .footer-legal a, .footer-legal button{ background:none; border:0; color:inherit; font:inherit; cursor:pointer; padding:0; text-decoration:underline; text-underline-offset:3px; }
+  .footer-legal a:hover, .footer-legal button:hover{ color:var(--text); }
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a href="index.html" aria-label="Volver al inicio de Custom Flow"><img src="logo.png" alt="Custom Flow"></a>
+  <a class="back" href="index.html">← Volver al sitio</a>
+</div></header>
+<div class="wrap">
+  <aside><nav aria-label="Contenido"><b>En esta página</b><a href="#responsable">1. Quién es el responsable</a><a href="#datos">2. Qué datos tratamos</a><a href="#finalidades">3. Para qué y con qué base</a><a href="#destinatarios">4. Con quién los compartimos</a><a href="#transferencias">5. Transferencias internacionales</a><a href="#conservacion">6. Cuánto tiempo los guardamos</a><a href="#derechos">7. Tus derechos</a><a href="#cookies">8. Cookies y almacenamiento</a><a href="#seguridad">9. Seguridad</a><a href="#menores">10. Menores de edad</a><a href="#cambios">11. Cambios a esta política</a></nav></aside>
+  <main>
+    <h1>Política de Privacidad</h1>
+    <p class="meta">Versión 1.0 · Vigente desde el 31 de octubre de 2026</p>
+    <p class="lead">Te explicamos de forma clara qué datos personales tratamos cuando visitas customflow.cl o nos escribes, y cómo ejercer tus derechos.</p>
+
+<div class="box"><strong>En simple:</strong> este sitio no tiene cuentas de usuario ni formularios que guarden tus datos en nuestros servidores. Si nos escribes, lo haces por WhatsApp y solo usamos lo que tú nos entregas para responderte. No vendemos datos, no hacemos perfiles ni tomamos decisiones automatizadas sobre ti.</div>
+
+<h2 id="responsable">1. Quién es el responsable</h2>
+<p>Esta política se emite conforme a la Ley N° 19.628 sobre protección de la vida privada, modificada por la Ley N° 21.719 que regula la protección y el tratamiento de los datos personales.</p>
+<table><tbody>
+<tr><th>Responsable</th><td>Custom Flow SpA</td></tr>
+<tr><th>RUT</th><td>78.474.691-7</td></tr>
+<tr><th>Representante legal</th><td>Carlos Eduardo Bastías Cornejo</td></tr>
+<tr><th>Domicilio</th><td>Av. San Fernando N°46, local 1146, Torre A, Concón, Región de Valparaíso, Chile</td></tr>
+<tr><th>Contacto sobre datos personales</th><td><a href="mailto:custom.flow.spa@gmail.com">custom.flow.spa@gmail.com</a> · WhatsApp +56 9 8289 5571</td></tr>
+<tr><th>Sitio web</th><td><a href="https://www.customflow.cl/">www.customflow.cl</a></td></tr>
+</tbody></table>
+
+<h2 id="datos">2. Qué datos tratamos</h2>
+<div class="tbl"><table>
+<thead><tr><th>Situación</th><th>Datos</th><th>Origen</th></tr></thead>
+<tbody>
+<tr><td><strong>Visitas al sitio</strong></td><td>Dirección IP, fecha y hora, página solicitada, tipo de navegador y dispositivo. Los registra de forma técnica el proveedor de alojamiento al servir la página.</td><td>Tu navegador, automáticamente</td></tr>
+<tr><td><strong>Contacto por WhatsApp</strong></td><td>Tu nombre (el de tu perfil), número de teléfono, el contenido de tus mensajes y los archivos que decidas enviarnos. Incluye el mensaje inicial que deja constancia de tu aceptación de estos documentos.</td><td>Tú, al escribirnos</td></tr>
+<tr><td><strong>Elección de cookies</strong></td><td>Tu preferencia (aceptar o rechazar cookies opcionales) y la fecha en que la diste, guardada solo en tu navegador.</td><td>Tú, al elegir en el banner</td></tr>
+</tbody></table></div>
+<p>Este sitio <strong>no solicita</strong> datos sensibles ni te pide registrarte. Te pedimos que no nos envíes datos sensibles (salud, creencias, orientación sexual, datos biométricos, etc.) ni datos de terceros sin su autorización. Si tu proyecto lo requiriera, lo conversaremos antes y se regulará en el contrato correspondiente.</p>
+
+<h2 id="finalidades">3. Para qué los usamos y con qué base legal</h2>
+<div class="tbl"><table>
+<thead><tr><th>Finalidad</th><th>Base de licitud</th></tr></thead>
+<tbody>
+<tr><td>Responder tu consulta, conversar tu proyecto y preparar una propuesta o cotización.</td><td>Tu <strong>consentimiento</strong> (casilla de aceptación antes de escribirnos) y medidas precontractuales que tú solicitas.</td></tr>
+<tr><td>Ejecutar el contrato si decides trabajar con nosotros y prestar soporte.</td><td>Ejecución de un contrato.</td></tr>
+<tr><td>Cumplir obligaciones legales y tributarias (por ejemplo, emisión y respaldo de documentos tributarios).</td><td>Obligación legal.</td></tr>
+<tr><td>Mantener la seguridad del sitio y prevenir abusos o fraudes.</td><td>Interés legítimo, sin afectar tus derechos y libertades.</td></tr>
+<tr><td>Medir el uso del sitio con cookies opcionales (hoy no se utiliza).</td><td>Tu consentimiento, que puedes negar sin consecuencias.</td></tr>
+</tbody></table></div>
+<p>No usamos tus datos para fines distintos de los indicados sin pedirte antes una autorización nueva. <strong>No vendemos ni cedemos tus datos con fines comerciales, no elaboramos perfiles y no adoptamos decisiones automatizadas</strong> que produzcan efectos jurídicos sobre ti.</p>
+<p>Tu consentimiento es libre, informado y específico, y se entrega con un acto afirmativo: marcar la casilla antes de escribirnos. La casilla nunca viene marcada de antemano. Puedes retirarlo cuando quieras, de forma tan simple como lo diste, sin efecto retroactivo.</p>
+
+<h2 id="destinatarios">4. Con quién los compartimos</h2>
+<p>Solo con proveedores que nos permiten operar el sitio y atenderte, que actúan por nuestra cuenta o bajo sus propias condiciones:</p>
+<div class="tbl"><table>
+<thead><tr><th>Proveedor</th><th>Para qué</th></tr></thead>
+<tbody>
+<tr><td><strong>Vercel Inc.</strong></td><td>Alojamiento y entrega del sitio web (registros técnicos de visitas).</td></tr>
+<tr><td><strong>WhatsApp / Meta Platforms</strong></td><td>Canal de mensajería cuando nos escribes. Sus condiciones y política de privacidad aplican a esa conversación.</td></tr>
+<tr><td><strong>GitHub, Inc.</strong></td><td>Repositorio del código del sitio. No recibe datos de quienes visitan el sitio.</td></tr>
+</tbody></table></div>
+<p>Además, podremos comunicar datos a autoridades cuando la ley o una orden judicial lo exija. Las fuentes tipográficas e íconos de este sitio se sirven desde nuestro propio dominio, por lo que tu navegador no consulta a terceros para cargarlos.</p>
+
+<h2 id="transferencias">5. Transferencias internacionales</h2>
+<p>Vercel, Meta y GitHub operan servidores fuera de Chile, principalmente en Estados Unidos. Por eso, algunos datos pueden tratarse fuera del país. Trabajamos solo con proveedores que declaran garantías adecuadas de protección y, cuando la ley lo exige, nos aseguramos de que existan cláusulas contractuales u otros mecanismos válidos para la transferencia.</p>
+
+<h2 id="conservacion">6. Cuánto tiempo los guardamos</h2>
+<ul>
+<li><strong>Consultas que no terminan en un proyecto:</strong> hasta 12 meses desde el último mensaje, y luego los eliminamos o anonimizamos.</li>
+<li><strong>Clientes:</strong> durante la relación contractual y, después, el tiempo en que la ley exija conservar documentación tributaria y contable (actualmente 6 años).</li>
+<li><strong>Registros técnicos del hosting:</strong> el plazo breve que defina el proveedor de alojamiento.</li>
+<li><strong>Tu elección de cookies:</strong> se guarda en tu navegador hasta que la cambies o borres los datos del sitio.</li>
+</ul>
+<p>Si pides eliminar tus datos antes, lo haremos salvo que debamos conservarlos por una obligación legal o para defender un reclamo.</p>
+
+<h2 id="derechos">7. Tus derechos</h2>
+<p>Como titular de datos personales puedes, <strong>gratuitamente</strong>:</p>
+<ul>
+<li><strong>Acceso:</strong> saber si tratamos tus datos y obtener una copia.</li>
+<li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+<li><strong>Supresión:</strong> pedir que eliminemos tus datos cuando proceda.</li>
+<li><strong>Oposición:</strong> negarte a un tratamiento, por ejemplo con fines de marketing.</li>
+<li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso común.</li>
+<li><strong>Bloqueo temporal:</strong> pedir que suspendamos el uso de tus datos mientras se resuelve una duda o reclamo.</li>
+<li><strong>No ser objeto de decisiones automatizadas</strong> que te afecten significativamente (no las aplicamos).</li>
+<li><strong>Retirar tu consentimiento</strong> en cualquier momento.</li>
+</ul>
+<h3>Cómo ejercerlos</h3>
+<p>Escríbenos a <a href="mailto:custom.flow.spa@gmail.com">custom.flow.spa@gmail.com</a> o por WhatsApp al +56 9 8289 5571, indicando tu nombre, el derecho que quieres ejercer y un modo de contactarte. Podemos pedirte datos adicionales solo para verificar tu identidad. Responderemos dentro de <strong>30 días corridos</strong>, plazo que podría prorrogarse por otros 30 si el caso lo justifica, y te avisaremos del motivo. Si rechazamos tu solicitud, te explicaremos por qué.</p>
+<h3>Reclamos</h3>
+<p>Si crees que no respetamos tus derechos, puedes reclamar ante nosotros y, además, ante la <strong>Agencia de Protección de Datos Personales</strong> en cuanto inicie sus funciones conforme a la Ley N° 21.719, sin perjuicio de las acciones judiciales que te correspondan.</p>
+
+<h2 id="cookies">8. Cookies y almacenamiento en tu navegador</h2>
+<p>Actualmente este sitio <strong>no usa cookies de análisis, publicidad ni seguimiento</strong>. Solo usa almacenamiento local técnico para recordar tu elección sobre cookies.</p>
+<div class="tbl"><table>
+<thead><tr><th>Nombre</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr></thead>
+<tbody>
+<tr><td><code>cf_cookie_consent_v1</code> (almacenamiento local)</td><td>Necesaria</td><td>Recordar si aceptaste o rechazaste las cookies opcionales.</td><td>Hasta que la cambies o borres los datos del sitio</td></tr>
+<tr><td>Cookies de medición de uso</td><td>Opcional</td><td>Estadísticas anónimas de visitas. <strong>No se utilizan hoy.</strong></td><td>—</td></tr>
+</tbody></table></div>
+<p>Si en el futuro incorporamos herramientas opcionales, solo se activarán después de que las aceptes y actualizaremos esta tabla. Rechazar es tan fácil como aceptar: el banner muestra ambos botones con el mismo destaque. Puedes cambiar tu decisión cuando quieras con <button type="button" data-cookie-prefs style="background:none;border:0;color:var(--cyan);font:inherit;cursor:pointer;text-decoration:underline;padding:0">Preferencias de cookies</button>, y también desde la configuración de tu navegador.</p>
+
+<h2 id="seguridad">9. Seguridad</h2>
+<p>Aplicamos medidas técnicas y organizativas razonables: conexión cifrada (HTTPS), acceso restringido a los sistemas, cuentas de proveedores protegidas y recursos propios sin cargas desde terceros. Si ocurriera una vulneración que afecte tus datos de forma relevante, la gestionaremos y comunicaremos conforme a la ley.</p>
+
+<h2 id="menores">10. Menores de edad</h2>
+<p>Este sitio está dirigido a personas y empresas que desarrollan una actividad. No tratamos conscientemente datos de menores de 14 años; si un niño o niña nos escribiera, necesitaríamos la autorización de su madre, padre o representante legal. Si crees que recibimos datos de un menor sin ella, avísanos para eliminarlos.</p>
+
+<h2 id="cambios">11. Cambios a esta política</h2>
+<p>Podemos actualizar esta política por cambios legales o del sitio. Publicaremos la nueva versión aquí con su número y fecha. Si el cambio altera de forma relevante cómo usamos tus datos, te lo informaremos y, si corresponde, pediremos de nuevo tu consentimiento.</p>
+<p>Consulta también los <a href="terminos.html">Términos y Condiciones</a>.</p>
+
+  </main>
+</div>
+<footer class="bot">
+  <a href="index.html">Inicio</a><a href="terminos.html">Términos y Condiciones</a><button type="button" data-cookie-prefs>Preferencias de cookies</button>
+  <p style="margin-top:14px">Custom Flow SpA · RUT 78.474.691-7 · Concón, Chile</p>
+</footer>
+
+<div class="ck" id="ck" role="dialog" aria-modal="false" aria-labelledby="ckT" hidden>
+  <h2 id="ckT">Tu privacidad, tu decisión</h2>
+  <p>Este sitio usa solo el almacenamiento técnico necesario para funcionar y recordar esta elección. Las cookies opcionales (medición de uso) <strong>están desactivadas</strong> y solo se activarían si las aceptas. Más información en la <a href="privacidad.html#cookies">Política de Privacidad</a>.</p>
+  <div class="ck-row">
+    <button type="button" class="ck-btn" id="ckReject">Rechazar</button>
+    <button type="button" class="ck-btn" id="ckAccept">Aceptar</button>
+  </div>
+  <button type="button" class="ck-link" id="ckCfg" aria-expanded="false" aria-controls="ckPanel">Configurar</button>
+  <div class="ck-panel" id="ckPanel" hidden>
+    <div class="ck-opt">
+      <div><b>Necesarias</b><span>Guardan esta elección y permiten que el sitio funcione. No se pueden desactivar.</span></div>
+      <label class="ck-sw"><input type="checkbox" checked disabled aria-label="Cookies necesarias"><i></i></label>
+    </div>
+    <div class="ck-opt">
+      <div><b>Medición de uso</b><span>Estadísticas anónimas de visitas. Hoy no usamos ninguna; quedaría desactivada salvo que la aceptes.</span></div>
+      <label class="ck-sw"><input type="checkbox" id="ckAnalytics" aria-label="Cookies de medición de uso"><i></i></label>
+    </div>
+    <div class="ck-row"><button type="button" class="ck-btn" id="ckSave">Guardar selección</button></div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='cf_cookie_consent_v1', box=document.getElementById('ck');
+  function read(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+  function write(a){
+    var rec={v:1,necessary:true,analytics:!!a,ts:new Date().toISOString()};
+    try{ localStorage.setItem(KEY,JSON.stringify(rec)); }catch(e){}
+    window.cfConsent=rec; apply(rec); box.hidden=true;
+    document.dispatchEvent(new CustomEvent('cf:consent',{detail:rec}));
+  }
+  // Punto de enganche: aquí se cargaría una herramienta de medición SOLO si rec.analytics === true.
+  function apply(rec){ /* hoy no se carga ninguna herramienta opcional */ }
+  function open(){
+    var r=read(); document.getElementById('ckAnalytics').checked=!!(r&&r.analytics);
+    box.hidden=false; document.getElementById('ckAccept').focus();
+  }
+  document.getElementById('ckAccept').onclick=function(){ write(true); };
+  document.getElementById('ckReject').onclick=function(){ write(false); };
+  document.getElementById('ckSave').onclick=function(){ write(document.getElementById('ckAnalytics').checked); };
+  var cfg=document.getElementById('ckCfg'), pn=document.getElementById('ckPanel');
+  cfg.onclick=function(){ var o=pn.hidden; pn.hidden=!o; cfg.setAttribute('aria-expanded',String(o)); };
+  document.querySelectorAll('[data-cookie-prefs]').forEach(function(b){ b.addEventListener('click',function(e){ e.preventDefault(); open(); }); });
+  var cur=read(); if(cur){ window.cfConsent=cur; apply(cur); } else { open(); }
+})();
+</script>
+
+</body>
+</html>

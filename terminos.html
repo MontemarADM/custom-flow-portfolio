@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos y Condiciones — Custom Flow</title>
+<meta name="description" content="Términos y Condiciones de uso del sitio customflow.cl, operado por Custom Flow SpA.">
+<link rel="canonical" href="https://www.customflow.cl/terminos.html">
+<meta name="theme-color" content="#0B0D12">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preload" href="inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;font-display:swap;src:url('space-grotesk.woff2') format('woff2');}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('inter.woff2') format('woff2');}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url('jetbrains-mono.woff2') format('woff2');}
+
+  :root{ --bg:#0B0D12; --bg-alt:#10131B; --surface:#151822; --surface-hi:#1B1F2C; --border:#262B3A;
+    --text:#F5F6FA; --text-dim:#B4B9CB; --text-faint:#7A8099; --violet:#3E8EEF; --cyan:#4FD8C4; --amber:#FA8232; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  a{ color:var(--cyan); text-underline-offset:3px; }
+  a:hover{ color:#fff; }
+  :focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
+  header.top{ border-bottom:1px solid var(--border); background:#0B0D12ee; position:sticky; top:0; backdrop-filter:blur(10px); z-index:10; }
+  .top-in{ max-width:1000px; margin:0 auto; padding:14px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .top-in img{ height:38px; display:block; }
+  .back{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:var(--text); text-decoration:none; border:1px solid var(--border); padding:9px 16px; border-radius:10px; }
+  .back:hover{ border-color:var(--cyan); }
+  .wrap{ max-width:1000px; margin:0 auto; padding:56px 24px 96px; display:grid; gap:48px; grid-template-columns:1fr; }
+  @media(min-width:900px){ .wrap{ grid-template-columns:240px minmax(0,1fr); } }
+  aside nav{ position:sticky; top:96px; font-size:0.85rem; }
+  aside nav b{ font-family:'Space Grotesk',sans-serif; display:block; margin-bottom:10px; color:var(--text); }
+  aside nav a{ display:block; color:var(--text-dim); text-decoration:none; padding:5px 0; border-left:2px solid var(--border); padding-left:12px; }
+  aside nav a:hover{ color:var(--text); border-color:var(--cyan); }
+  @media(max-width:899px){ aside{ display:none; } }
+  main{ max-width:72ch; }
+  h1{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(2rem,5vw,2.9rem); letter-spacing:-0.02em; line-height:1.1; margin-bottom:14px; }
+  .meta{ font-size:0.85rem; color:var(--text-faint); margin-bottom:28px; }
+  .lead{ color:var(--text-dim); font-size:1.05rem; margin-bottom:12px; }
+  .box{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--cyan); border-radius:12px; padding:16px 20px; margin:22px 0; font-size:0.95rem; color:var(--text-dim); }
+  h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.4rem; margin:44px 0 12px; letter-spacing:-0.01em; scroll-margin-top:90px; }
+  h3{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.05rem; margin:22px 0 6px; }
+  p{ margin-bottom:14px; color:var(--text-dim); }
+  ul,ol{ margin:0 0 16px 22px; color:var(--text-dim); }
+  li{ margin-bottom:6px; padding-left:4px; }
+  strong{ color:var(--text); font-weight:600; }
+  table{ width:100%; border-collapse:collapse; margin:14px 0 22px; font-size:0.88rem; }
+  th,td{ text-align:left; vertical-align:top; padding:11px 12px; border-bottom:1px solid var(--border); color:var(--text-dim); }
+  th{ color:var(--text); font-family:'Space Grotesk',sans-serif; font-weight:600; background:var(--surface); }
+  .tbl{ overflow-x:auto; }
+  footer.bot{ border-top:1px solid var(--border); padding:28px 24px; text-align:center; font-size:0.82rem; color:var(--text-faint); }
+  footer.bot a{ color:var(--text-dim); margin:0 10px; }
+  footer.bot button{ background:none; border:0; color:var(--text-dim); font:inherit; cursor:pointer; text-decoration:underline; text-underline-offset:3px; margin:0 10px; }
+
+  /* ---------- consentimiento ---------- */
+  .consent{ max-width:560px; margin:0 auto; text-align:left; }
+  .consent-check{
+    display:flex; gap:14px; align-items:flex-start; cursor:pointer;
+    background:var(--bg-alt); border:1px solid var(--border); border-radius:14px;
+    padding:16px 18px; font-size:0.88rem; line-height:1.55; color:var(--text-dim);
+    transition:border-color .2s;
+  }
+  .consent-check:hover{ border-color:var(--violet); }
+  .consent-check input{
+    appearance:none; -webkit-appearance:none; flex-shrink:0;
+    width:22px; height:22px; margin-top:1px; border-radius:6px;
+    border:2px solid var(--text-faint); background:transparent; cursor:pointer;
+    display:grid; place-items:center; transition:background .15s,border-color .15s;
+  }
+  .consent-check input:checked{ background:var(--cyan); border-color:var(--cyan); }
+  .consent-check input:checked::after{
+    content:''; width:6px; height:11px; border:solid #0B0D12; border-width:0 2.5px 2.5px 0;
+    transform:rotate(45deg) translate(-1px,-1px);
+  }
+  .consent-check input:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
+  .consent-check a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; }
+  .consent-actions{ display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:22px; }
+  .btn-primary.is-disabled{
+    background:var(--surface-hi); color:var(--text-faint); box-shadow:none;
+    cursor:not-allowed; transform:none; border:1px solid var(--border);
+  }
+  .btn-primary.is-disabled:hover{ transform:none; box-shadow:none; }
+  .consent-note{ font-size:0.78rem; color:var(--text-faint); line-height:1.55; text-align:center; max-width:52ch; margin:0 auto; }
+  .consent-note a{ text-decoration:underline; text-underline-offset:3px; }
+  .consent-hint{ font-size:0.82rem; color:var(--amber); min-height:1.2em; text-align:center; }
+
+  /* ---------- banner de cookies ---------- */
+  .ck{
+    position:fixed; z-index:100; left:16px; right:16px; bottom:16px;
+    max-width:520px; background:var(--surface); color:var(--text);
+    border:1px solid var(--border); border-radius:18px; padding:22px;
+    box-shadow:0 24px 60px -12px #000c; font-size:0.88rem; line-height:1.55;
+  }
+  @media(min-width:640px){ .ck{ left:24px; right:auto; bottom:24px; } }
+  .ck[hidden]{ display:none; }
+  .ck h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.05rem; margin-bottom:8px; }
+  .ck p{ color:var(--text-dim); }
+  .ck p a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; }
+  .ck-row{ display:flex; gap:10px; margin-top:16px; }
+  .ck-btn{
+    flex:1; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;
+    padding:12px 14px; border-radius:10px; cursor:pointer;
+    background:var(--surface-hi); color:var(--text); border:1px solid var(--text-faint);
+    transition:border-color .2s, background .2s;
+  }
+  .ck-btn:hover{ border-color:var(--cyan); background:#222838; }
+  .ck-btn:focus-visible, .ck-link:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
+  .ck-link{
+    background:none; border:0; color:var(--text-dim); font:inherit; font-size:0.84rem;
+    text-decoration:underline; text-underline-offset:3px; cursor:pointer; margin-top:12px; padding:4px 0;
+  }
+  .ck-link:hover{ color:var(--text); }
+  .ck-panel{ margin-top:14px; border-top:1px solid var(--border); padding-top:6px; }
+  .ck-opt{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:12px 0; border-bottom:1px solid var(--border); }
+  .ck-opt b{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.92rem; display:block; margin-bottom:2px; }
+  .ck-opt span{ color:var(--text-dim); font-size:0.8rem; }
+  .ck-sw{ position:relative; flex-shrink:0; width:44px; height:26px; }
+  .ck-sw input{ position:absolute; inset:0; opacity:0; width:100%; height:100%; margin:0; cursor:pointer; z-index:2; }
+  .ck-sw i{ position:absolute; inset:0; border-radius:99px; background:var(--surface-hi); border:1px solid var(--text-faint); transition:background .2s; }
+  .ck-sw i::after{ content:''; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:var(--text-dim); transition:transform .2s, background .2s; }
+  .ck-sw input:checked + i{ background:var(--cyan); border-color:var(--cyan); }
+  .ck-sw input:checked + i::after{ transform:translateX(18px); background:#0B0D12; }
+  .ck-sw input:disabled{ cursor:not-allowed; }
+  .ck-sw input:disabled + i{ opacity:.55; }
+  .ck-sw input:focus-visible + i{ outline:2px solid var(--cyan); outline-offset:2px; }
+  .footer-legal{ display:flex; flex-wrap:wrap; gap:6px 22px; font-size:0.82rem; color:var(--text-dim); }
+  .footer-legal a, .footer-legal button{ background:none; border:0; color:inherit; font:inherit; cursor:pointer; padding:0; text-decoration:underline; text-underline-offset:3px; }
+  .footer-legal a:hover, .footer-legal button:hover{ color:var(--text); }
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a href="index.html" aria-label="Volver al inicio de Custom Flow"><img src="logo.png" alt="Custom Flow"></a>
+  <a class="back" href="index.html">← Volver al sitio</a>
+</div></header>
+<div class="wrap">
+  <aside><nav aria-label="Contenido"><b>En esta página</b><a href="#titular">1. Quiénes somos</a><a href="#aceptacion">2. Aceptación</a><a href="#objeto">3. Qué es este sitio</a><a href="#uso">4. Uso permitido</a><a href="#contacto">5. Cómo contactarnos</a><a href="#propuestas">6. Propuestas y contratos</a><a href="#propiedad">7. Contenidos del sitio</a><a href="#enlaces">8. Enlaces y apps de ejemplo</a><a href="#responsabilidad">9. Responsabilidad</a><a href="#datos">10. Datos personales</a><a href="#cambios">11. Cambios</a><a href="#ley">12. Ley y tribunales</a></nav></aside>
+  <main>
+    <h1>Términos y Condiciones</h1>
+    <p class="meta">Versión 1.0 · Vigente desde el 31 de octubre de 2026</p>
+    <p class="lead">Reglas de uso del sitio customflow.cl y de nuestro canal de contacto.</p>
+
+<div class="box"><strong>En simple:</strong> este sitio presenta lo que hacemos y te permite escribirnos. Lo que contratemos juntos se regula en un contrato aparte. Úsalo de buena fe y respeta los contenidos.</div>
+
+<h2 id="titular">1. Quiénes somos</h2>
+<p>El sitio <a href="https://www.customflow.cl/">www.customflow.cl</a> es operado por <strong>Custom Flow SpA</strong>, RUT 78.474.691-7, con domicilio en Av. San Fernando N°46, local 1146, Torre A, Concón, Región de Valparaíso, Chile. Representante legal: Carlos Eduardo Bastías Cornejo. Contacto: <a href="mailto:custom.flow.spa@gmail.com">custom.flow.spa@gmail.com</a> · WhatsApp +56 9 8289 5571.</p>
+
+<h2 id="aceptacion">2. Aceptación</h2>
+<p>Al navegar este sitio aceptas estos Términos. Para escribirnos desde el sitio te pedimos marcar una casilla donde declaras haber leído estos Términos y la <a href="privacidad.html">Política de Privacidad</a> y consientes el tratamiento de tus datos para responder tu consulta. Si no estás de acuerdo, no uses el formulario de contacto; puedes seguir navegando.</p>
+
+<h2 id="objeto">3. Qué es este sitio</h2>
+<p>Es una página informativa de Custom Flow SpA, empresa que diseña y desarrolla software de gestión a medida para micro y pequeñas empresas, y que presenta ejemplos de aplicaciones como ACCUDRIVE, FixMatch, Homelist y MeterScan. El sitio no es una tienda ni permite contratar o pagar en línea.</p>
+
+<h2 id="uso">4. Uso permitido</h2>
+<p>Te comprometes a usar el sitio de buena fe y conforme a la ley. En particular, no puedes:</p>
+<ul>
+<li>intentar acceder sin autorización a sistemas, cuentas o datos, ni vulnerar la seguridad del sitio;</li>
+<li>enviar mensajes con contenido ilícito, ofensivo, engañoso o que suplante a otra persona;</li>
+<li>usar sistemas automatizados para extraer masivamente contenido o sobrecargar el sitio;</li>
+<li>entregar datos personales de terceros sin su autorización.</li>
+</ul>
+
+<h2 id="contacto">5. Cómo contactarnos</h2>
+<p>El contacto se hace por WhatsApp. Al marcar la casilla y presionar el botón se abre la aplicación con un mensaje inicial que deja constancia de tu aceptación de estos Términos y de la Política de Privacidad (con su versión y fecha). Tu conversación se rige además por las condiciones de WhatsApp. Procuramos responder en un plazo razonable, sin garantizar tiempos de respuesta.</p>
+
+<h2 id="propuestas">6. Propuestas, cotizaciones y contratos</h2>
+<p>La información del sitio es referencial y no constituye una oferta vinculante. Los alcances, plazos, precios, forma de pago, soporte y demás condiciones de un proyecto se acuerdan por escrito en una propuesta o contrato específico, que prevalece sobre estos Términos en lo que se refiera a ese proyecto.</p>
+
+<h2 id="propiedad">7. Contenidos del sitio</h2>
+<p>Los textos, diseño, logotipo, marcas, imágenes y capturas del sitio pertenecen a Custom Flow SpA o se usan con autorización de sus titulares, y están protegidos por la Ley N° 17.336 sobre propiedad intelectual y la Ley N° 19.039 sobre propiedad industrial. No puedes copiarlos, modificarlos ni distribuirlos con fines comerciales sin nuestra autorización escrita. Se permite compartir el enlace del sitio y citar fragmentos breves indicando la fuente.</p>
+
+<h2 id="enlaces">8. Enlaces y aplicaciones de ejemplo</h2>
+<p>El sitio enlaza a aplicaciones y a servicios de terceros (por ejemplo, WhatsApp). Esos sitios tienen sus propias condiciones y políticas, de las que no somos responsables. Las aplicaciones mostradas son ejemplos de nuestro trabajo; su disponibilidad o funciones pueden cambiar sin aviso y no constituyen una promesa de servicio.</p>
+
+<h2 id="responsabilidad">9. Responsabilidad</h2>
+<p>Hacemos esfuerzos razonables para que el sitio esté disponible y la información sea correcta, pero se ofrece «tal cual». No respondemos por interrupciones, errores u omisiones ajenos a nuestro control, ni por daños indirectos derivados del uso del sitio, en la medida permitida por la ley. Nada de lo anterior limita derechos irrenunciables que la ley te reconozca, incluidos los de la Ley N° 19.496 sobre protección de los derechos de los consumidores cuando corresponda.</p>
+
+<h2 id="datos">10. Datos personales</h2>
+<p>Tratamos tus datos conforme a nuestra <a href="privacidad.html">Política de Privacidad</a>, que forma parte de estos Términos. Allí encontrarás qué datos tratamos, con qué base, por cuánto tiempo y cómo ejercer tus derechos de acceso, rectificación, supresión, oposición, portabilidad y bloqueo, y cómo retirar tu consentimiento.</p>
+
+<h2 id="cambios">11. Cambios</h2>
+<p>Podemos modificar estos Términos. La versión vigente es la publicada aquí, con su número y fecha. El uso del sitio después de un cambio implica que lo aceptas, sin perjuicio de que, si el cambio afecta tus datos de forma relevante, te lo informemos y pidamos de nuevo tu consentimiento cuando corresponda.</p>
+
+<h2 id="ley">12. Ley aplicable y tribunales</h2>
+<p>Estos Términos se rigen por las leyes de la República de Chile. Cualquier controversia se someterá a los tribunales ordinarios de justicia con competencia en la comuna de Concón, sin perjuicio de los derechos que la ley te otorgue para litigar ante otro tribunal.</p>
+<p>Consultas sobre estos Términos: <a href="mailto:custom.flow.spa@gmail.com">custom.flow.spa@gmail.com</a>.</p>
+
+  </main>
+</div>
+<footer class="bot">
+  <a href="index.html">Inicio</a><a href="privacidad.html">Política de Privacidad</a><button type="button" data-cookie-prefs>Preferencias de cookies</button>
+  <p style="margin-top:14px">Custom Flow SpA · RUT 78.474.691-7 · Concón, Chile</p>
+</footer>
+
+<div class="ck" id="ck" role="dialog" aria-modal="false" aria-labelledby="ckT" hidden>
+  <h2 id="ckT">Tu privacidad, tu decisión</h2>
+  <p>Este sitio usa solo el almacenamiento técnico necesario para funcionar y recordar esta elección. Las cookies opcionales (medición de uso) <strong>están desactivadas</strong> y solo se activarían si las aceptas. Más información en la <a href="privacidad.html#cookies">Política de Privacidad</a>.</p>
+  <div class="ck-row">
+    <button type="button" class="ck-btn" id="ckReject">Rechazar</button>
+    <button type="button" class="ck-btn" id="ckAccept">Aceptar</button>
+  </div>
+  <button type="button" class="ck-link" id="ckCfg" aria-expanded="false" aria-controls="ckPanel">Configurar</button>
+  <div class="ck-panel" id="ckPanel" hidden>
+    <div class="ck-opt">
+      <div><b>Necesarias</b><span>Guardan esta elección y permiten que el sitio funcione. No se pueden desactivar.</span></div>
+      <label class="ck-sw"><input type="checkbox" checked disabled aria-label="Cookies necesarias"><i></i></label>
+    </div>
+    <div class="ck-opt">
+      <div><b>Medición de uso</b><span>Estadísticas anónimas de visitas. Hoy no usamos ninguna; quedaría desactivada salvo que la aceptes.</span></div>
+      <label class="ck-sw"><input type="checkbox" id="ckAnalytics" aria-label="Cookies de medición de uso"><i></i></label>
+    </div>
+    <div class="ck-row"><button type="button" class="ck-btn" id="ckSave">Guardar selección</button></div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='cf_cookie_consent_v1', box=document.getElementById('ck');
+  function read(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+  function write(a){
+    var rec={v:1,necessary:true,analytics:!!a,ts:new Date().toISOString()};
+    try{ localStorage.setItem(KEY,JSON.stringify(rec)); }catch(e){}
+    window.cfConsent=rec; apply(rec); box.hidden=true;
+    document.dispatchEvent(new CustomEvent('cf:consent',{detail:rec}));
+  }
+  // Punto de enganche: aquí se cargaría una herramienta de medición SOLO si rec.analytics === true.
+  function apply(rec){ /* hoy no se carga ninguna herramienta opcional */ }
+  function open(){
+    var r=read(); document.getElementById('ckAnalytics').checked=!!(r&&r.analytics);
+    box.hidden=false; document.getElementById('ckAccept').focus();
+  }
+  document.getElementById('ckAccept').onclick=function(){ write(true); };
+  document.getElementById('ckReject').onclick=function(){ write(false); };
+  document.getElementById('ckSave').onclick=function(){ write(document.getElementById('ckAnalytics').checked); };
+  var cfg=document.getElementById('ckCfg'), pn=document.getElementById('ckPanel');
+  cfg.onclick=function(){ var o=pn.hidden; pn.hidden=!o; cfg.setAttribute('aria-expanded',String(o)); };
+  document.querySelectorAll('[data-cookie-prefs]').forEach(function(b){ b.addEventListener('click',function(e){ e.preventDefault(); open(); }); });
+  var cur=read(); if(cur){ window.cfConsent=cur; apply(cur); } else { open(); }
+})();
+</script>
+
+</body>
+</html>
